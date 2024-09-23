@@ -1,0 +1,212 @@
+{
+  "animatedVideos":[
+    {
+      "title":"Learn C Programming in Animated Way",
+      "author":"Log2Base2®",
+      "index":"1",
+      "playlistId":"PLhb7SOmGNUc5oQfFU2EbR7lNxU5sBA8fc",
+      "imageUrl":"https://i.ytimg.com/vi/_x1MmVhLOt4/maxresdefault.jpg"
+    },
+    {
+      "title":"Pair With Target Sum",
+      "author":"Log2Base2®",
+      "index":"2",
+      "playlistId":"PLhb7SOmGNUc6FUfvF96ivQLibsm-S6SNt",
+      "imageUrl":"https://i.ytimg.com/vi/lPWJfmU2iiM/maxresdefault.jpg"
+    },
+    {
+      "title":"Find the Middle of a Given Linked List",
+      "author":"Log2Base2®",
+      "index":"3",
+      "playlistId":"PLhb7SOmGNUc56rRlKUgZdMgYrCUx2Jwtw",
+      "imageUrl":"https://i.ytimg.com/vi/Q2HdbBosNAU/maxresdefault.jpg"
+    },
+    {
+      "title":"Disable Nth Bit of a Number ",
+      "author":"Log2Base2®",
+      "index":"4",
+      "playlistId":"PLhb7SOmGNUc72aJ-_rWJcqKOUg44bExuy",
+      "imageUrl":"https://i.ytimg.com/vi/ZbvtzYF24ww/maxresdefault.jpg"
+    },
+    {
+      "title":"Program Execution Process",
+      "author":"Log2Base2®",
+      "index":"5",
+      "playlistId":"PLhb7SOmGNUc6Fg7zmBOOS3yN2AG0JiREp",
+      "imageUrl":"https://i.ytimg.com/vi/JZkPEl8JjZo/maxresdefault.jpg"
+    },
+    {
+      "title":"Bitwise Operations in C ",
+      "author":"Log2Base2®",
+      "index":"6",
+      "playlistId":"PLhb7SOmGNUc4cfMSku0Zpqz2dPQ6iAQ05",
+      "imageUrl":"https://i.ytimg.com/vi/9qYD12jws8g/maxresdefault.jpg"
+    },
+    {
+      "title":"Data Structures Visualization",
+      "author":"Log2Base2®",
+      "index":"7",
+      "playlistId":"PLhb7SOmGNUc5AZurO-im4t_RDr-ymjz0d",
+      "imageUrl":"https://i.ytimg.com/vi/hj3Rm3liN0o/maxresdefault.jpg"
+    },
+    {
+      "title":"Pointers in C",
+      "author":"Log2Base2®",
+      "index":"8",
+      "playlistId":"PLhb7SOmGNUc4EBVjd7x5TiEyOKXt71whE",
+      "imageUrl":"https://i.ytimg.com/vi/_x1MmVhLOt4/maxresdefault.jpg"
+    }
+  ],
+
+
+  "playlistsVideos": [
+    {
+      "title": "C Language Tutorials In Hindi",
+      "author": "CodeWithHarry",
+      "index": "1",
+      "playlistId": "PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR",
+      "imageUrl":"https://i.ytimg.com/vi/7Dh73z3icd8/maxresdefault.jpg"
+
+    },
+    {
+      "title": "C++ Full Course",
+      "author": "Apna College",
+      "index": "2",
+      "playlistId": "PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+      "imageUrl":"https://i.ytimg.com/vi/z9bZufPHFLU/maxresdefault.jpg"
+    },
+    
+    {
+      "title": "Java Complete Course-Placement Series",
+      "author": "Apna College",
+      "index": "3",
+      "playlistId": "PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop",
+      "imageUrl":"https://i.ytimg.com/vi/yRpLlJmRo2w/maxresdefault.jpg"
+    },
+    {
+      "title": "Complete C++ Placement DSA Course",
+      "author": "CodeHelp-by Babbar",
+      "index": "4",
+      "playlistId": "PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+      "imageUrl":"https://i.ytimg.com/vi/WQoB2z67hvY/maxresdefault.jpg"
+    },
+    
+    {
+      "title": "MySQL Tutorial For Beginners ",
+      "author": "edureka",
+      "index": "5",
+      "playlistId": "PL9ooVrP1hQOGECN1oA2iXcWFBTRYUxzQG",
+      "imageUrl":"https://i.ytimg.com/vi/q_JsgpiuY98/maxresdefault.jpg"
+    },
+   
+    {
+      "title": "Flutter Complete Tutorial in Hindi (Beginner to Advanced Level)",
+      "author": "WsCube Tech",
+      "index": "6",
+      "playlistId": "PLjVLYmrlmjGfGLShoW0vVX_tcyT8u1Y3E",
+      "imageUrl":"https://i.ytimg.com/vi/jqxz7QvdWk8/maxresdefault.jpg"
+    },
+    {
+      "title": "React Js Tutorials in Hindi",
+      "author": "CodeWithHarry",
+      "index": "7",
+      "playlistId": "PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt",
+      "imageUrl":"https://i.ytimg.com/vi/-mJFZp84TIY/maxresdefault.jpg"
+    },
+    {
+      "title": "Android Development Tutorial In Hindi",
+      "author": "CodeWithHarry",
+      "index": "8",
+      "playlistId": "PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd",
+      "imageUrl":"https://i.ytimg.com/vi/InigFUSiPl8/maxresdefault.jpg"
+    },
+    {
+      "title": "Linux Tutorial For Beginners",
+      "author": "Intellipaat",
+      "index": "9",
+      "playlistId": "PLVHgQku8Z935eR_43bNi2SbCaeGQU2IzF",
+      "imageUrl":"https://i.ytimg.com/vi/yz5KGHtqNi8/maxresdefault.jpg"
+    },
+    {
+      "title": "Full Stack Web Development",
+      "author": "Intellipaat",
+      "index": "10",
+      "playlistId": "PLVHgQku8Z935JSXaVoKmrNg89X30pdf5M",
+      "imageUrl":"https://i.ytimg.com/vi/O_UPTxj9zmY/maxresdefault.jpg"
+    },
+    {
+      "title": "Azure Tutorial For Beginners",
+      "author": "Intellipaat",
+      "index": "11",
+      "playlistId": "PLVHgQku8Z9352mszt1V__xIkZijLAwSel",
+      "imageUrl":"https://i.ytimg.com/vi/WMJUeGn0Fsw/maxresdefault.jpg"
+    },
+    {
+      "title": "Some Management(MBA) Courses",
+      "author": "Intellipaat",
+      "index": "12",
+      "playlistId": "PLVHgQku8Z93623uLDHGt9ulFC9uaNoC3C",
+      "imageUrl":"https://i.ytimg.com/vi/498WOrayIC0/maxresdefault.jpg"
+    }
+
+  ],
+
+  "oneShotVideos":[
+    {
+      "title": "Python Tutorial For Beginners In Hindi",
+      "author": "CodeWithHarry",
+      "index": "1",
+      "videoId": "gfDE2a7MKjA",
+      "imageUrl":"https://i.ytimg.com/vi/gfDE2a7MKjA/maxresdefault.jpg"
+    },
+    {
+      "title": "HTML Tutorial for Beginners ",
+      "author": "Apna College",
+      "index": "2",
+      "videoId": "HcOc7P5BMi4",
+      "imageUrl":"https://i.ytimg.com/vi/HcOc7P5BMi4/maxresdefault.jpg"
+    },
+    {
+      "title": "CSS Tutorial In Hindi ",
+      "author": "CodeWithHarry",
+      "index": "3",
+      "videoId": "Edsxf_NBFrw",
+      "imageUrl":"https://i.ytimg.com/vi/Edsxf_NBFrw/maxresdefault.jpg"
+    },
+    {
+      "title": "JavaScript Tutorial In Hindi ",
+      "author": "CodeWithHarry",
+      "index": "4",
+      "videoId": "hKB-YGF14SY",
+      "imageUrl":"https://i.ytimg.com/vi/hKB-YGF14SY/maxresdefault.jpg"
+    },
+    {
+      "title": "Node Js Tutorial In Hindi ",
+      "author": "CodeWithHarry",
+      "index": "5",
+      "videoId": "BLl32FvcdVM",
+      "imageUrl":"https://i.ytimg.com/vi/BLl32FvcdVM/maxresdefault.jpg"
+    },
+    {
+      "title": "Php Tutorial for Beginners in Hindi with MySQL Project",
+      "author": "CodeWithHarry",
+      "index": "6",
+      "videoId": "1SnPKhCdlsU",
+      "imageUrl":"https://i.ytimg.com/vi/1SnPKhCdlsU/maxresdefault.jpg"
+    },
+    {
+      "title": "ChatGPT Tutorial for Developers",
+      "author": "Programming with Mosh",
+      "index": "7",
+      "videoId": "sTeoEFzVNSc",
+      "imageUrl":"https://i.ytimg.com/vi/sTeoEFzVNSc/maxresdefault.jpg"
+    },
+    {
+      "title": "Most Effective way to use Leetcode in 2023",
+      "author": "Anshika Gupta",
+      "index": "8",
+      "videoId": "3nUFIYnd4dU",
+      "imageUrl":"https://i.ytimg.com/vi/3nUFIYnd4dU/maxresdefault.jpg"
+    }
+  ]
+}

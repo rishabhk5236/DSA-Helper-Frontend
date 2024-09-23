@@ -1,0 +1,7 @@
+.jobsContainer .card{
+    margin: 1vw
+}
+
+.jobsContainer .card .card-text{
+    margin: 0;
+}

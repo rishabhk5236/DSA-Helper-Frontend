@@ -1,0 +1,12 @@
+.optionCard {
+    margin: 0.2vw;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons .btn {
+    margin: 1vw;
+}

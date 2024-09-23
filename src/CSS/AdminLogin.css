@@ -1,0 +1,33 @@
+.adminContainer{
+    background-color: #cbdbd0;
+    margin: 1vw;
+    padding: 1vw;
+}
+
+.adminContainer h1{
+    font-size: 2vw;
+    margin-bottom: 2vw;
+}
+
+.adminContainer label{
+    font-size: 1.3vw;
+}
+
+@media screen and (max-width:600px) {
+
+    .adminContainer{
+        margin: 1vw;
+        padding: 3vw;
+    }
+
+    .adminContainer label{
+        font-size: 3vw;
+    }
+    
+
+    .adminContainer h1{
+        font-size: 4vw;
+        margin-bottom: 3vw;
+    }
+    
+}

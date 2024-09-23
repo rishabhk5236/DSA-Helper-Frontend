@@ -1,0 +1,204 @@
+.questionPaperCoursesCard img{
+    width: 18vw;
+}
+
+.questionPaperCoursesCard{
+    box-shadow: 0.1vw 0.1vw 0.15vw 0.15vw rgba(177, 209, 177, 0.639);
+}
+
+.questionPaperCoursesCard .card-title{
+    font-size: 2vw;
+}
+
+
+.accordion-header button{
+    background-color: #cbdbd0;
+    font-weight: bold;
+    margin: 0.5vw;
+}
+
+.SemesterFrontLogo{
+    margin: 0;padding: 0;
+    width: 2vw;
+}
+
+.QuestionPapersFront_backPng{
+    width: 2vw;
+    cursor: pointer;
+}
+
+
+.css-1g86id8-MuiTreeItem-content .MuiTreeItem-label{
+    color: rgb(10, 48, 10);
+}
+
+.QuestionPaperContainer{
+    margin-top: 1vw;
+    padding: 1vw;
+    background-color: #ebf4ee;
+    box-shadow: 0.1vw 0.1vw 0.13vw 0.13vw rgba(165, 220, 165, 0.584);
+    height: min-content;
+    max-height: 45vw;
+    overflow-y: scroll;
+}
+
+.QuestionPaperContainer h3{
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+.questionPapers_notes_main_container{
+    display: flex;
+}
+
+.notesContainer{
+    width: 100%;
+    margin: 1vw 0 0 1vw;
+    padding: 1vw;
+    background-color: #ebf4ee;
+    box-shadow: 0.1vw 0.1vw 0.13vw 0.13vw rgba(165, 220, 165, 0.584);
+
+}
+
+
+
+
+.notesContainer .noteCard img{
+    width: 10vw;
+}
+.notesContainer .noteCard{
+    /* width: 18vw; */
+    width:min-content;
+    margin: 1vw;
+    padding: 0;
+}
+
+.notesContainer .noteCard a{
+    font-size: 0.7vw;
+    padding: 0.2vw;
+    justify-content: center;
+    
+}
+
+.notesContainer .noteCard .downloadNotesPng , .notesContainer .noteCard .deleteNotesPng{
+    cursor: pointer;
+    width: 2vw;
+    margin-right: 0.2vw;
+}
+
+.notesContainer h2{
+    font-size: 2vw;
+    margin-bottom: 2vw;
+}
+
+.notesContainer .noteCard .card-title{
+    font-size: 1.2vw;
+}
+
+
+.notesContainer .addingNotes ,.notesContainer .noteCard .deletingNotes , .QuestionPaperContainer .addingQuestionPapers{
+    cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+    margin-bottom: 2vw;
+
+}
+
+
+.notesContainer .noteCard .deleteNotesButton{
+    margin-top: 0.5vw;
+}
+
+
+.add-year-btn{
+    font-size: 1vw;
+    margin: 1vw;
+}
+
+.addNotesAndQuestionPaperModal input , .addNotesAndQuestionPaperModal select{
+    font-size: 1vw;
+}
+
+.questionPaperContainer .css-1g86id8-MuiTreeItem-content .MuiTreeItem-label {
+    border: 0.1vw solid black;
+    margin: 0.5vw;
+    padding: 0.5vw;
+}
+
+@media screen and (max-width:600px) {
+    
+    .questionPaperCoursesCard img{
+        width: 30vw;
+    }
+
+    .questionPaperCoursesCard .card-title{
+        font-size: 4vw;
+    }
+
+    .QuestionPapersFront_backPng{
+        width: 6vw;
+
+    }
+
+    .QuestionPaperContainer h3{
+        font-size: 4.5vw;
+        margin-bottom: 3vw;
+    }
+    .QuestionPaperContainer{
+        margin: 3vw;
+        padding: 3vw;
+        max-height: 50vh;
+    }
+
+    .questionPapers_notes_main_container{
+        display: block;
+    }
+    .notesContainer h2{
+        font-size: 4.5vw;
+        margin-bottom: 4vw;
+    }
+
+    .notesContainer .noteCard a{
+        font-size: 2vw;
+        padding: 0.5vw;
+    }
+
+    .notesContainer .noteCard .downloadNotesPng , .notesContainer .noteCard .deleteNotesPng {
+        cursor: pointer;
+        width: 3vw;
+    }
+
+    .notesContainer .noteCard .card-title{
+        font-size: 2.5vw;
+    }
+    
+    .notesContainer .noteCard img{
+        width: 20vw;
+    }
+
+    .notesContainer{
+        padding: 3vw;
+    }
+
+    .notesContainer .addingNotes , .notesContainer .noteCard .deletingNotes ,.QuestionPaperContainer .addingQuestionPapers{
+        cursor: pointer;
+        width: 4.5vw;
+        height: 4.5vw;
+        margin-bottom: 4vw;
+    
+    }
+
+
+    .notesContainer .noteCard .deleteNotesButton{
+        margin-top: 1.5vw;
+    }
+
+    .add-year-btn{
+        font-size: 2.5vw;
+        margin: 1vw;
+    }
+    
+    
+.addNotesAndQuestionPaperModal input , .addNotesAndQuestionPaperModal select{
+    font-size: 3vw;
+}
+}

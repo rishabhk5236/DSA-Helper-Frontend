@@ -1,0 +1,105 @@
+.addPlaylistIcon{
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+    margin-top: 1.5vw;
+}
+
+.AdminPlaylistHeading{
+    font-size: 2vw;
+    margin-top: 1.5vw;
+}
+
+.adminPlaylistOSAnimatedVideosMainContainer{
+    background-color: rgba(177, 206, 181, 0.705);
+    margin: 1vw;
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+
+.addPlaylistIcon:hover{
+    width: 2.2vw;
+    height: 2.2vw;
+}
+
+
+.card .deletePlaylistIcon{
+    width: 1.7vw;
+    cursor: pointer;
+}
+
+.card .deletePlaylistIcon:hover{
+    width: 1.8vw;
+
+}
+
+
+.playlistsCard{
+    box-shadow: 0.1vw 0.1vw 0.11vw 0.11vw rgba(35, 79, 35, 0.658);
+}
+
+.playlistsCard .card-title{
+    font-size: 1.2vw;
+    font-weight: bold;
+
+}
+
+.playlistsCard .card-text{
+    font-size: 1.2vw;
+    margin: 0;
+}
+
+/* this code is for main resource page handling  */
+
+.mainContainerOfAllResources{
+    display: flex;
+}
+
+@media  screen and (max-width:600px) {
+    .AdminPlaylistHeading{
+        font-size: 4vw;
+        margin-top: 3vw;
+    }
+
+    .addPlaylistIcon{
+        width: 3.4vw;
+        height: 3.4vw;
+        margin-top: 3vw;
+    }
+
+    .addPlaylistIcon:hover{
+        width: 3.6vw;
+        height: 3.6vw;
+    }
+
+    .card .deletePlaylistIcon{
+        width: 3.8vw;
+        cursor: pointer;
+    }
+    
+    .card .deletePlaylistIcon:hover{
+        width: 4vw;
+    
+    }
+
+    .playlistsCard .card-title{
+        font-size: 3.2vw;
+    
+    }
+    
+    .playlistsCard .card-text{
+        font-size: 2.8vw;
+    }
+
+    .adminPlaylistOSAnimatedVideosMainContainer{
+        height: 50vh;
+        margin: 2vw;
+    }
+
+    .mainContainerOfAllResources{
+        display: block;
+    }
+
+
+}

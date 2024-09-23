@@ -1,0 +1,192 @@
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+.navbar-brand{
+    text-decoration: none;
+    color:white;
+    font-size: 2vw;
+}
+.navbar-brand:hover{
+    color: white;
+}
+
+  
+.navbar-toggler{
+    border:0.5px solid white
+}
+
+.navbar-toggler-icon{
+    background-image: url(../MediaResources/Navbar/menuBurger.png);
+}
+
+.navbar{
+    background-color:#36523f;
+}
+
+
+.offcanvas{
+    background-color: #36523f;
+}
+
+
+#offcanvasRightLabel{
+    color:white;
+    font-size: 4vh;
+}
+
+.offcanvas-header{
+    background-color: rgb(64, 115, 64);
+
+}
+
+.nav-item .navbar-buttons{
+    color: white;
+    font-size: 1.3vw;
+}
+
+.nav-item .navbar-buttons:hover{
+    color: rgb(208, 242, 225);
+    font-size: 1.32vw;
+}
+
+.nav-link img{
+    width: 2.2vw;
+}
+
+.locationChangeNavItemStyle .navbar-buttons{
+    border-bottom: 0.1vw solid rgb(255, 255, 255);
+}
+
+.gif-loader,.loadertext p{
+    display: none;
+}
+
+.signUpLoginbtn{
+    font-size: 1.5vw;
+}
+
+.nav-item .userProfile{
+    background-color: rgba(255, 255, 255, 0.103);
+    border: 0.1vw solid white;
+    padding: 0.5vw;
+    border-radius: 5%;
+}
+
+
+/* this css is for navbar user profile card  */
+.userProfileDropDown .card-title{
+    font-size: 1.5vw;
+}
+.userProfileDropDown .card-subtitle{
+    font-size: 1vw;
+}
+
+.userProfileDropDown .card{
+    padding: 0;
+    margin: 0;
+    color: #36523f;
+}
+.userProfileDropDown .card-text{
+    font-size: 0.9vw;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-brand{
+        font-size: 5vw;
+    }
+    .navbar-nav .nav-link{
+        color: #36523f;
+        padding: 0;
+        border-bottom: 0.5vw solid ;
+        margin-bottom: 1vh;
+    }
+
+
+    .offcanvas-body .btn{
+        color: white;
+        background-color: rgb(64, 115, 64);
+    }
+
+
+    #offcanvasRightLabel{
+        font-size: 6vw;
+        margin: 0;
+    }
+
+    #cross{
+        background:none;
+    }
+
+    .offcanvas{
+        --bs-offcanvas-width: 55vw;
+        background-color: rgb(210, 224, 208);
+    }
+
+    .nav-link img{
+        width: 10vw;
+    }
+    .nav-item .navbar-buttons{
+        margin: 0.3vw 0 0.3vw 0;
+        font-size: 3vw;
+    }
+
+    .nav-item .navbar-buttons:hover{
+        color: black;
+        font-size: 3.1vw;
+    }
+
+    .gif-loader{
+        display: flex;
+        justify-content: center;
+        margin-top: 30vw;
+        border-bottom: 0.2vh solid rgb(64, 115, 64);
+    }
+
+    .loadertext p{
+        display: flex;
+        font-size: 4vw;
+        color: rgb(64, 115, 64);
+        font-weight: 500;
+    }
+    .locationChangeNavItemStyle .navbar-buttons{
+        background-color: rgb(139, 189, 139);
+        color: black;
+       
+    }
+
+    .signUpLoginbtn{
+        font-size: 3vw;
+    }
+
+    .modal-backdrop.show{
+        display: none;
+    }
+
+    .nav-item .userProfile{
+        background-color: #4cb06b8c;
+        border: 0.5vw solid black;
+        padding: 0.5vw;
+        border-radius: 5%;
+    }
+
+    
+/* this css is for navbar user profile card  */
+.userProfileDropDown .card-title{
+    font-size: 3.5vw;
+}
+.userProfileDropDown .card-subtitle{
+    font-size: 2.5vw;
+}
+
+.userProfileDropDown .card{
+    padding: 0;
+    margin: 0;
+}
+.userProfileDropDown .card-text{
+    font-size: 2vw;
+}
+}

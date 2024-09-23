@@ -1,0 +1,161 @@
+.main-bar{
+    padding: 0;
+    margin: 0.5vw;
+}
+
+.body{
+    padding: 1vw;
+}
+
+.side-bar{
+    background-color: rgb(204, 235, 208);
+    height: 85vh;
+    margin: 0.5vw;
+    padding: 0.7vw;
+    overflow-y: scroll;
+
+}
+
+.main-video{
+    width: 67vw;
+    height: 70vh;
+}
+
+.video-card{
+    padding: 1vw;
+    background-color: rgb(249, 252, 248);
+}
+
+.side-bar-text{
+    box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgb(98, 142, 99);
+    font-size: 1.2vw;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.side-bar-card{
+    margin:0.5vw 0.5vw 1vw 0.5vw;
+}
+
+.side-bar-anchor{
+    text-decoration: none;
+    color: black;
+}
+
+
+.side-bar-card:hover{
+    background-color: #335336;
+    color: white;
+}
+
+
+
+.collapse-button,.collapse-card{
+    display: none;
+}
+
+.side-bar-heading{
+    font-size: 2vw;
+}
+
+.main-body-button{
+    background-color: #335336;
+    font-size: 1vw;
+}
+.main-body-button:hover{
+    color: black;
+    background-color: #c0f0c5;
+}
+
+.more-button{
+    font-size: 1vw;
+}
+
+.video-title{
+    font-size: 1.7vw;
+    margin: 0;
+}
+
+.published-at{
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    color: rgb(39, 39, 39);
+}
+
+.video-text{
+    font-size: 1.1vw
+}
+
+@media  screen and (max-width:600px) {
+    
+    .collapse-button,.collapse-card{
+        display: block;
+    }
+    .side-bar{
+        display: none;
+    }
+    .main-video{
+        width:auto;
+        height: 35vh;
+    }
+
+    .collapse-card{
+      background-color: rgb(204, 235, 208);
+      padding: 2vw;
+      max-height: 30vh;
+      overflow-y: scroll;
+    }
+    .collapse-card-text{
+      background-color: white;
+      box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgb(98, 142, 99);
+      font-size: 2.5vw;
+      font-weight: 500;
+      margin:0.5vw 0.5vw 1.5vw 0.5vw;
+      cursor: pointer;
+      
+    }
+    .card-body .collapse-button{
+      font-size: 2.5vw;
+      display: inline-block;
+      background-color: #335336;
+      color: white;
+      margin-bottom: 1vw;
+    }
+
+    .collapse-anchor{
+        text-decoration: none;
+        color: black;
+    }
+
+    .collapse-card-text:hover{
+        background-color: #335336;
+        color: white;
+        box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw rgb(255, 255, 255);
+    }
+    .video-title{
+        margin-top:2vw;
+    }
+
+    .main-body-button{
+        font-size: 2.5vw;
+    }
+
+    .more-button{
+        font-size: 2.5vw;
+    }
+
+    .video-title{
+        font-size: 4vw;
+        margin: 0;
+    }
+    
+    .published-at{
+        font-size: 2.2vw;
+        margin-bottom: 1vw;
+        color: rgb(39, 39, 39);
+    }
+    
+    .video-text{
+        font-size: 2.4vw
+    }
+}

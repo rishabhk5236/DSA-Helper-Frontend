@@ -1,0 +1,9 @@
+.loader{
+    width: 4vw;
+}
+
+@media screen and (max-width:600px) {
+    .container .loader{
+        width: 8vw;
+    }
+}

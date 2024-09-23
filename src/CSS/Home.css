@@ -1,0 +1,206 @@
+/* this CSS is for content */
+
+.greetCard {
+    padding: 2vw;
+    margin-top: 2vw;
+    box-shadow: 0px 0px 0.5vw 0.5vw rgb(170, 170, 170);
+}
+
+.greetCard .col-md-4 img {
+    width: 25vw;
+    margin-left: 2vw;
+}
+
+.content {
+    width: 55vw;
+}
+
+.bodyForHeadings h1 {
+    font-size: 3.5vw;
+}
+
+.bodyForHeadings .static-text {
+    font-size: 2.2vw;
+}
+
+.bodyForHeadings p {
+    font-size: 1.3vw;
+}
+
+.content p img {
+    width: 3vw;
+}
+
+
+/* this code is for .animated-text */
+
+.animated-text {
+    display: flex;
+}
+
+.bodyForHeadings .dynamic-text {
+    font-size: 2.2vw;
+    margin-left: 0.32vw;
+    color: rgb(56, 195, 56);
+}
+
+@media screen and (max-width:600px) {
+    .greetCard .col-md-4 img {
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+    .content {
+        text-align: center;
+    }
+    .content p img {
+        width: 6vw;
+    }
+    .bodyForHeadings h1 {
+        font-size: 6vw;
+    }
+    .bodyForHeadings .static-text {
+        font-size: 4.3vw;
+    }
+    .bodyForHeadings p {
+        font-size: 2.5vw;
+    }
+    .bodyForHeadings .dynamic-text {
+        font-size: 4.3vw;
+        margin-left: 1vw;
+        color: rgb(56, 195, 56);
+    }
+    .animated-text {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1213px;
+    }
+}
+
+
+/* this CSS is bor body menu  */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.menuCardGroup .menuCard .card-title {
+    font-size: 1.7vw;
+    border-bottom: 0.05rem solid black;
+    color: rgb(20, 59, 20);
+}
+
+.menuCardGroup .menuCard .card-text {
+    font-size: 1.2vw;
+}
+
+.menuCardGroup .menuCard {
+    width: 20vw;
+    margin: 1vw;
+    box-shadow: 0.1vw 0.1vw rgb(174, 174, 174);
+    overflow: hidden;
+    text-align: center;
+}
+
+.menuCardGroup .menuCard:hover {
+    box-shadow: 0.2vw 0.2vw rgb(91, 199, 132);
+}
+
+.menuCard img {
+    width: 18vw;
+}
+
+.menuCardGroup .menuCard .btn {
+    font-size: 1vw;
+    align-self: baseline;
+}
+
+#container2 {
+    width: 30vw;
+    margin: 6vw;
+    margin-bottom: 3vw;
+    margin-top: 3vw;
+}
+
+#container2 .card-title {
+    font-size: 3vw;
+}
+
+#container2 .card-text {
+    font-size: 1.5vw;
+}
+
+.exploreHeading {
+    font-size: 3vw;
+}
+
+#container2 .btn {
+    font-size: 1.2vw;
+}
+
+.clickButton {
+    font-size: 1vw;
+}
+
+
+/* this css is for screen that are 600px and less */
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 4vw;
+    }
+    #container2 .card-title {
+        font-size: 4vw;
+    }
+    #container2 .card-text {
+        font-size: 2vw;
+    }
+    #container .card {
+        padding: 0;
+    }
+    #container2 {
+        width: 45vw;
+        margin: 2vw;
+    }
+    #container2 .btn {
+        font-size: 2vw;
+        color: rgb(10, 37, 9);
+    }
+    .clickButton {
+        font-size: 2vw;
+        padding: 1vw;
+    }
+    .menuCardGroup {
+        justify-content: center;
+    }
+    .menuCardGroup .menuCard {
+        width: 35vw;
+        margin: 2vw;
+        overflow: hidden;
+    }
+    .menuCard img {
+        width: 28vw;
+    }
+    .menuCardGroup .menuCard .card-text {
+        margin: 0;
+        font-size: 2vw;
+    }
+    .menuCardGroup .menuCard .card-title {
+        margin-bottom: 1vw;
+        font-size: 2.5vw;
+    }
+    .menuCardGroup .menuCard .btn {
+        font-size: 2.1vw;
+    }
+}

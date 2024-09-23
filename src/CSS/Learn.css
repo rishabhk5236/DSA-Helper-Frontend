@@ -1,0 +1,61 @@
+.heading {
+  font-size: 2vw;
+  text-align: center;
+  margin: 2vw;
+}
+
+#containerLearn {
+  width: 18vw;
+  padding: 0;
+  margin: 2vw;
+}
+
+#containerLearn .learnCardImg {
+  width: 18vw;
+}
+
+#containerLearn .card-title {
+  font-size: 1.5vw;
+}
+.card-body .btn {
+  font-size: 1vw;
+}
+
+.learnCardText {
+  font-size: 1vw;
+}
+
+.videosSection {
+  background-color: rgb(220, 228, 222);
+}
+
+
+/* this css is for mobile screen  */
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 5vw;
+    text-align: center;
+    margin: 2vw;
+  }
+
+  #containerLearn {
+    width: 25vw;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  #containerLearn .learnCardImg {
+    width: 25vw;
+  }
+
+  #containerLearn .card-title {
+    font-size: 2.5vw;
+  }
+  .card-body .btn {
+    font-size: 1.5vw;
+  }
+
+  .learnCardText {
+    font-size: 1.7vw;
+  }
+}

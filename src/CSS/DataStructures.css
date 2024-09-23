@@ -1,0 +1,87 @@
+body{
+    overflow-x: hidden;
+}
+
+.topHeading{
+    font-size: 2vw;
+    margin: 1vw;
+}
+
+#container2{
+    width: 20vw;
+    margin: 2vw;
+}
+
+#container2 .card-title {
+    font-size: 2vw;
+}
+#container2 .card-text{
+    font-size: 1vw;
+}
+#container2 .btn {
+    font-size: 0.9vw;
+}
+
+.card img{
+    width: 18vw;
+}
+
+
+.menuCardGroup .menuCard .card-title{
+    font-size: 1.7vw;
+    border-bottom:0.05rem solid black ;
+    color: rgb(20, 59, 20);
+
+}
+
+.menuCardGroup .menuCard .card-text{
+    font-size: 1.2vw;
+}
+
+.menuCardGroup .menuCard{
+    width: 20vw;
+    margin: 1vw;
+    box-shadow: 0.1vw 0.1vw rgb(174, 174, 174);
+    overflow: hidden;
+    text-align: center;
+}
+
+.menuCardGroup .menuCard:hover{
+    box-shadow: 0.2vw 0.2vw rgb(91, 199, 132);
+}
+
+
+
+
+.menuCardGroup .menuCard .btn{
+    font-size: 1vw;
+    align-self: baseline;
+}
+
+
+@media screen and (max-width: 600px){
+    .topHeading{
+        font-size:4vw;
+        margin: 2vw;
+    }
+
+    #container2{
+        width: 42vw;
+        margin: 3vw;
+        padding: 1vw;
+    }
+
+    #container2 .card-title {
+        font-size: 4vw;
+    }
+    #container2 .card-text{
+        font-size: 3vw;
+    }
+    #container2 .btn {
+        font-size: 2vw;
+    }    
+
+    .card img{
+        width: 40vw;
+    }
+}

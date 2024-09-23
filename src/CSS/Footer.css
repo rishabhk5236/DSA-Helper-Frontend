@@ -1,0 +1,99 @@
+.col-md-3{
+    width: 14vw;
+}
+
+.footer{
+    background-color: #36523f;
+    margin: 0;
+    margin-top: 2vw;
+    overflow: hidden;
+}
+.contact a,.learn a,.about a{
+    color: white;
+    text-decoration: none;
+    font-size: 1vw;
+
+}
+
+.contact img{
+    width: 1.4vw;
+    margin-right: 0.5vw;
+}
+
+
+.WebHeading{
+    font-size: 1.5vw;
+}
+
+.footer-text{
+    font-size: 1vw;
+}
+
+.learn h5,.contact h5,.about h5{
+    font-size: 1.2vw;
+}
+
+.copyrightHeading{
+    font-size: 1vw;
+}
+
+.learn a:hover,.contact a:hover,.about a:hover{
+    color: #8cdea6;
+}
+
+.p-4{
+    padding: 1.5vw!important;
+}
+.p-3{
+    padding: 0.5vw!important;
+}
+
+.greet{
+    font-size: 2vw;
+}
+
+@media screen and (max-width: 600px) {
+    .WebHeading{
+        font-size: 3vw;
+        margin: 0;
+    }
+
+    .footer-text{
+        font-size: 2vw;
+        margin: 0;
+    }
+
+    .learn h5,.contact h5,.about h5{
+        font-size: 2vw;
+        margin: 0;
+    }
+
+    .contact a,.learn a,.about a{
+        font-size: 1.6vw;
+    }
+
+    .col-md-3{
+        width: 30vw;
+    }
+    .copyrightHeading{
+        font-size: 2vw;
+        margin: 0;
+    }
+
+    .contact img{
+        width: 2vw;
+        margin-right: 0.5vw;
+    }
+
+    .p-4{
+        padding: 2vw!important;
+    }
+
+    .greet{
+        font-size: 3vw;
+    }
+
+    .list-unstyled li{
+        font-size: 2vw;
+    }
+}
