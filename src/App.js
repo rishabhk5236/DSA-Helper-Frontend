@@ -21,6 +21,7 @@ import Pointers from "./Components/Pointers";
 import Jobs from "./Components/Jobs";
 import About from "./Components/About";
 import Quiz from "./Components/Quiz";
+import QuizPage from "./Components/QuizPage";
 
 function App() {
 
@@ -182,7 +183,12 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
             <Route
               exact
               path="/quiz"
-              element={<Quiz setProgress={setProgress} />}
+              element={<Quiz setProgress={setProgress} showAlert={showAlert}/>}
+            />
+            <Route
+              exact
+              path="/quizPage"
+              element={<QuizPage setProgress={setProgress}/>}
             />
            
           </Routes>

@@ -10,3 +10,62 @@
 .buttons .btn {
     margin: 1vw;
 }
+
+.quiz-techstack {
+    margin-top: 2vw;
+}
+
+.quiz-techstack .card-header {
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.quiz-techstack .skillCategory {
+    background: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.quiz-techstack .skillCategory .btn {
+    width: 16.66%;
+    flex: 0 0 auto;
+    margin: 0 1px;
+    font-size: 1vw;
+    border: 0.1vw solid rgb(40, 84, 33);
+    background-color: rgb(71, 139, 60);
+    padding: 0.5vw;
+}
+
+.quiz-techstack .skillCategory .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.quiz-techstack .skillCategory .clicked {
+    background-color: white;
+    color: black;
+}
+
+.quiz-techstack .skillList img {
+    width: 5vw;
+    margin: 0.2vw;
+}
+
+.quiz-techstack .skillList {
+    margin: 0.5vw;
+    font-size: 1vw;
+    padding: 0.2vw;
+}
+
+.skillList .skill {
+    margin: 0.5vw;
+}
+
+.skillList .skill:hover {
+    box-shadow: 0vw 0vw 0.5vw 0vw black;
+}
+
+.skillList .card-body {
+    text-align: center;
+    padding: 0;
+}
