@@ -2,10 +2,10 @@ import "./App.css";
 import DataStructures from "./Components/DataStructures";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useSubmit } from "react-router-dom";
 import Learn from "./Components/Learn";
 import LearnPlaylistPage from "./Components/LearnPlaylistPage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LearnVideoPage from "./Components/LearnVideoPage";
 import LoadingBar from "react-top-loading-bar";
 import Home from "./Components/Home";
@@ -34,6 +34,14 @@ function App() {
   const [videoid, setvideoid] = useState("");
   const [progress, setProgress] = useState(0);
   const [alert,setAlert]=useState(null);
+  const [output,setOutput]=useState([]);
+  const [quizModalDetails,setQuizModalDetails]=useState({
+    proficiency: "Beginner",
+    noOfQuestions: "10",
+  })
+  const [timerTime,setTimerTime]=useState("");
+  const [quizTopic , setQuizTopic] = useState("");
+
 
 
   // this code is for shoing alert 
@@ -48,7 +56,9 @@ function App() {
     }, 1500);
   }
 
-
+  useEffect(()=>{
+    
+  },[output])
 
   const SessionTimeOutLogoutUser=()=>{
     if(localStorage.getItem('auth-token')){
@@ -96,9 +106,10 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
             progress={progress}
             onLoaderFinished={() => setProgress(0)}
           />
-          <Navbar setProgress={setProgress} base_url={base_url}/>
+          <Navbar setProgress={setProgress} base_url={base_url} timerTime= {timerTime}/>
           <Alert alert={alert}/>
-          <Routes>
+          <div className="viewPort">
+          <Routes >
             <Route
               exact
               path="/"
@@ -183,15 +194,16 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
             <Route
               exact
               path="/quiz"
-              element={<Quiz setProgress={setProgress} showAlert={showAlert}/>}
+              element={<Quiz setProgress={setProgress} showAlert={showAlert} setOutput={setOutput} quizModalDetails={quizModalDetails} setQuizModalDetails= {setQuizModalDetails} setTimerTime={setTimerTime} setQuizTopic={setQuizTopic}/>}
             />
             <Route
               exact
               path="/quizPage"
-              element={<QuizPage setProgress={setProgress}/>}
+              element={<QuizPage setProgress={setProgress} showAlert={showAlert} output={output} quizModalDetails={quizModalDetails} quizTopic={quizTopic}/>}
             />
            
           </Routes>
+          </div>
           <Footer setProgress={setProgress} base_url={base_url} />
         </Router>
 

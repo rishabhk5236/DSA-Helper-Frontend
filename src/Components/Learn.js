@@ -30,6 +30,7 @@ export default function Learn(props) {
     }
   }, []);
 
+  
   return (
     <>
       <div className="container">
@@ -39,8 +40,8 @@ export default function Learn(props) {
             return (
               <div
                 key={element.title}
-                className="card text-center col-md-4"
-                id="containerLearn"
+                className="card text-center col-md-4 containerLearn"
+                id={element.playlistId}
               >
                 <img
                   className="learnCardImg card-img-top"
@@ -71,8 +72,8 @@ export default function Learn(props) {
             return (
               <div
                 key={element.title}
-                className="card text-center col-md-4"
-                id="containerLearn"
+                className="card text-center col-md-4 containerLearn"
+                id={element.playlistId}
               >
                 <img
                   className="learnCardImg card-img-top"
@@ -103,8 +104,8 @@ export default function Learn(props) {
             return (
               <div
                 key={element.title}
-                className="card text-center col-md-4"
-                id="containerLearn"
+                className="card text-center col-md-4 containerLearn"
+                id={element.playlistId}
               >
                 <img
                   className="learnCardImg card-img-top"

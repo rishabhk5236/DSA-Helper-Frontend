@@ -1,0 +1,218 @@
+.quizPageContainer {
+    width: 80vw;
+    margin: auto;
+    margin-top: 1vw;
+    
+}
+
+.quizPageContainer .card {
+    background-color: rgb(222, 229, 222);
+}
+
+.quizPageContainer h2 {
+    font-size: 2vw;
+}
+
+.quizPageContainer h5 {
+    font-size: 1.3vw;
+}
+
+
+.optionCard .card-body {
+    font-size: 1vw;
+    cursor: pointer;
+    background-color: white;
+}
+
+.optionCard .card-body:hover {
+    font-weight: 600;
+    color: white;
+    background-color: #36523f;
+}
+
+
+.optionCard .card-body:active {
+    color: black;
+    background-color: rgb(229, 249, 222);
+}
+
+
+.timer{
+    margin: 1vw;
+    font-size: 2vw;
+    
+}
+
+.timer img{
+    width: 3.5vw;
+    height: auto;
+
+}
+
+.timer{
+    background: rgb(247,247,247);
+    background: linear-gradient(90deg, rgba(247,247,247,1) 0%, rgba(188,250,182,1) 49%, rgba(247,247,247,1) 100%);
+}
+
+
+.timeInDanger{
+    color: red;
+}
+.blink {
+    animation: blink 1s ease-out infinite;
+}
+
+
+.quizFinishContainer .card{
+    height: 50vh;
+    border: none;
+}
+
+.quizFinishContainer img{
+    width: 8vw;
+    display: inline;
+}
+
+
+.quizFinishContainer .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.quizFinishContainer .btn {
+    background-color: #36523f;
+    color: white;
+}
+
+
+.quizFinishContainer .btn:hover{
+    background-color: white;
+    color:#36523f;
+    border: 0.1vw solid #36523f ;
+}
+
+
+.reviewAnswerModal{
+    display: flex;
+    justify-content: start;
+}
+
+.reviewAnswerModal .modal-content{
+    width: 50vw;
+}
+
+
+.reviewAnswerCard{
+    margin: 1vw;
+}
+
+.reviewAnswerCard .card-title{
+    font-size: 1.5vw;
+}
+
+.reviewAnswerCard .reviewOptionCard{
+    font-size: 1vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+}
+
+
+.reviewAnswerCard .rightAnswer{
+    background-color: rgba(135, 180, 135, 0.575);
+}
+
+.reviewAnswerCard .wrongAnswer{
+    background-color: rgba(188, 141, 141, 0.641);
+}
+
+
+.reviewAnswerCard .wrongSelection{
+    color: red;
+}
+
+.reviewAnswerCard .rightSelection{
+    color: green;
+}
+
+.reviewAnswerCard .yourSelection{
+    margin-bottom: 0;
+}
+
+.reviewAnswerCard .yourSelection img{
+    width: 4vw;
+}
+
+/* this animation is for blinking the timer  */
+@keyframes blink {
+    10%{ color: white;}
+    100%{color: red;}
+}
+
+
+
+
+
+/* this css is for moblie view  */
+
+@media screen and (max-width: 600px) {
+
+    .startQuizContainer .card .btn{
+        font-size: 3vw;
+    }
+
+    .timer img{
+        width: 5.3vw;
+        height: auto;
+    }
+
+
+    .timer{
+        font-size: 3.5vw;
+    }
+    
+
+    .quizPageContainer .card-title{
+        font-size: 3vw;
+    }
+
+    .quizPageContainer .card-text{
+        font-size: 3.5vw;
+    }
+
+    .optionCard .card-body{
+        font-size: 2.5vw;
+        margin-bottom: 1vw;
+    }
+
+    .quizPageContainer .buttons .btn{
+        font-size: 2.3vw;
+
+    }
+
+    .quizFinishContainer img{
+        width: 20vw;
+    }
+
+    .quizFinishContainer .buttons .btn{
+        font-size: 2.3vw;
+    }
+
+    .reviewAnswerCard .card-title{
+        font-size: 3.5vw;
+    }
+
+    .reviewAnswerCard .card-text{
+        font-size: 4vw;
+    }
+
+    .reviewAnswerCard .reviewOptionCard .card-body{
+        font-size: 2.8vw;
+    }
+
+    .reviewAnswerCard .yourSelection {
+        margin-top: 2vw;
+        font-size: 3.5vw;
+    }
+
+}

@@ -8,8 +8,7 @@ import {Link} from 'react-router-dom';
 export default function Footer(props) {
   return (
     <>
-          <h3 className=" greet text-center mt-0">!! Thank You for Visiting !!</h3>
-          <section className="main">
+          {/* <h3 className=" greet text-center mt-0">!! Thank You for Visiting !!</h3> */}
         <footer className="footer text-white">
           <div className="container p-4">
             <div className="row">
@@ -33,20 +32,16 @@ export default function Footer(props) {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/data-structures">
                       Searching
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link to="/data-structures">
                       Sorting
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/">
-                      Competitive Coding
-                    </Link>
-                  </li>
+                 
                 </ul>
               </div>}
 
@@ -59,21 +54,7 @@ export default function Footer(props) {
                       About us
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/">
-                      Company Overview
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/">
-                      Privacy Term
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/">
-                      Help
-                    </Link>
-                  </li>
+                  
                 </ul>
               </div>}
 
@@ -83,17 +64,13 @@ export default function Footer(props) {
                 <ul className="list-unstyled  mb-0">
                   <li className="footerContactEmail">helpdsahelper@gmail.com</li>
                   <li>
-                    <a href="https://www.instagram.com/_rishabh__2.0/" target="_blank">
+                    <a href="https://www.instagram.com/mairishabhhu/" target="_blank">
                       <img src={instaLogo} alt=".."/>Instagram
                     </a>
                   </li>
+                  
                   <li>
-                    <a href="/"target="_blank" >
-                      <img src={twitterLogo} alt=".."/>Twitter
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/in/seema-sachan-303b21231/" target="_blank">
+                    <a href="https://www.linkedin.com/in/rishabh-kanaujiya-49643a222/" target="_blank">
                       <img src={linkedinLogo} alt=".."/>Linkedin
                     </a>
                   </li>
@@ -102,7 +79,7 @@ export default function Footer(props) {
             </div>
           </div>
 
-          <div
+          {/* <div
             className="copyrightHeading text-center p-3"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
           >
@@ -110,10 +87,10 @@ export default function Footer(props) {
             <a className="text-white" href="https://mdbootstrap.com/">
               www.dsahelper.com
             </a>
-          </div>
+          </div> */}
 
         </footer>
-      </section>
+
     </>
   );
 }

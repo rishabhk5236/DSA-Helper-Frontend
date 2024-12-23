@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import ResourcesContext from '../Context/resourcesContext.js';
+import { useSubmit } from 'react-router-dom';
 
 export default function ResourcesState(props) {
   const [playlist, setPlaylist] = useState([]);
@@ -8,11 +9,16 @@ export default function ResourcesState(props) {
   const [oneShotVideos, setOneShotVideos] = useState([]);
   const [notes,setNotes]=useState([]);
   const [jobs,setJobs]=useState([]);
+  const [quizStarted,setQuizStarted]=useState(false);
 
   const [userDetails,setUserDetails]=useState({name:"",email:"",date:"",id:"",mobile:"",dateOfBirth:""});
   const [adminDetails,setAdminDetails]=useState({name:"",email:"",date:"",id:"",mobile:"",dateOfBirth:""});
   
   const host="https://dsa-helper-backend.onrender.com";
+
+  const setQuizStart = (value)=>{
+    setQuizStarted(value);
+  }
 
   const getUserDetails =async ()=>{
     const response=await fetch(`${host}/api/auth/getuser`,{
@@ -126,7 +132,7 @@ export default function ResourcesState(props) {
   
   return (
     <div>
-      <ResourcesContext.Provider value={{host,userDetails,getUserDetails,adminDetails,getAdminDetails,playlist,oneShotVideos,animatedVideos,getResources,notes,getNotes,getJobs,jobs}}>
+      <ResourcesContext.Provider value={{host,userDetails,getUserDetails,adminDetails,getAdminDetails,playlist,oneShotVideos,animatedVideos,getResources,notes,getNotes,getJobs,jobs , quizStarted, setQuizStart}}>
         {props.children}
       </ResourcesContext.Provider>
     </div>

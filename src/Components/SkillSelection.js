@@ -46,7 +46,7 @@ import topicWiseLogo from '../MediaResources/Quiz/Skills/topicWise.png';
 
 
 
-export default function SkillSelection() {
+export default function SkillSelection(props) {
   const category = [
     "Programming",
     "DSA",
@@ -314,65 +314,73 @@ export default function SkillSelection() {
     switch (element) {
       case "Programming":
          setData(Programming_Langauge);
-        await setClicked("Programming");
+        setClicked("Programming");
         break;
       case "DSA":
          setData(DSA);
-        await setClicked("DSA");
+        setClicked("DSA");
         break;
       case "Theoratical Subjects":
          setData(Theoratical_subjects);
-        await setClicked("Theoratical Subjects");
+        setClicked("Theoratical Subjects");
         break;
       case "Aptitude":
          setData(Aptitude);
-        await setClicked("Aptitude");
+        setClicked("Aptitude");
         break;
       case "Verbal Reasoning":
          setData(Verbal_reasoning);
-        await setClicked("Verbal Reasoning");
+        setClicked("Verbal Reasoning");
         break;
       case "GATE":
          setData(Gate);
-        await setClicked("GATE");
+        setClicked("GATE");
         break;
       default:
          setData(Programming_Langauge);
-        await setClicked("Programming");
+        setClicked("Programming");
         break;
     }
 
     
   };
 
-  return (
-    <div className="container">
+  // this function is for selecting the quiz topic
+  
+  const setQT=async (topic)=>{
+    await props.setQuizTopic(topic);
 
-      <div class="card quiz-techstack">
-        <div class="card-header text-center">
+  }
+
+  return (
+    <div className="container skillsContainer">
+
+      <div className="card quiz-techstack">
+        <div className="card-header text-center">
           Kindly select any tech stack to start your quiz
         </div>
-        <div class="card-header skillCategory text-center">
-          {category.map((element) => {
+        <div className="card-header skillCategory text-center">
+          {category.map((element,index) => {
             return (
               <p
                 className={`btn btn-primary ${
                   element === clicked ? "clicked" : ""
                 }`}
                 onClick={() => handleCategory(element)}
+                key={index}
               >
                 {element}
               </p>
             );
           })}
         </div>
-        <div class="row skillList d-flex justify-content-center">
+        <div className="row skillList d-flex">
           {data.map((element, index) => {
             return (
-              <div class="card skill col-md-1 "data-bs-toggle="modal" data-bs-target="#skillSelectionModal">
-                <img src={element.Logo} class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <p class="card-title"> {element.title}</p>
+              <div className="card skill col-md-1 " onClick={()=>setQT(element.title)} data-bs-toggle="modal" data-bs-target="#skillSelectionModal"  key={element.title}>
+                <img src={element.Logo} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <p className="card-title"> {element.title}</p>
                 </div>
               </div>
             );

@@ -16,12 +16,13 @@ import resourcesContext from "../Context/resourcesContext";
 import { useEffect } from "react";
 import { Button } from "@mui/material";
 import QuizLogo from '../MediaResources/Navbar/Quiz.png';
+import Timer from "./Timer";
 
 export default function Navbar(props) {
   const navigate = useNavigate();
 
   const context = useContext(resourcesContext);
-  const { userDetails, getUserDetails, adminDetails, getAdminDetails } =
+  const { userDetails, getUserDetails, adminDetails, getAdminDetails , quizStarted  } =
     context;
 
   const location = useLocation();
@@ -141,8 +142,8 @@ export default function Navbar(props) {
                   }`}
                 >
 
-                  {(localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken")) && (
+                  {((localStorage.getItem("auth-token") ||
+                    localStorage.getItem("adminAuthToken")) && !quizStarted  ) && (
                     <Link
                       className="nav-link  me-3 navbar-buttons"
                       aria-current="page"
@@ -162,8 +163,8 @@ export default function Navbar(props) {
                       : ""
                   }`}
                 >
-                  {(localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken")) && (
+                  {((localStorage.getItem("auth-token") ||
+                    localStorage.getItem("adminAuthToken")) && !quizStarted ) && (
                     <Link
                       className="nav-link  me-3 navbar-buttons"
                       aria-current="page"
@@ -203,8 +204,8 @@ export default function Navbar(props) {
                       : ""
                   }`}
                 >
-                  {(localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken")) && (
+                  {((localStorage.getItem("auth-token") ||
+                    localStorage.getItem("adminAuthToken"))&& !quizStarted ) && (
                     <Link
                       className="nav-link  me-3 navbar-buttons"
                       aria-current="page"
@@ -217,6 +218,7 @@ export default function Navbar(props) {
                     </Link>
                   )}
                 </li>
+                
                 <li
                   className={`nav-item ${
                     location.pathname === "/quiz"
@@ -224,8 +226,8 @@ export default function Navbar(props) {
                       : ""
                   }`}
                 >
-                  {(localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken")) && (
+                  {((localStorage.getItem("auth-token") ||
+                    localStorage.getItem("adminAuthToken"))&& !quizStarted ) && (
                     <Link
                       className="nav-link  me-3 navbar-buttons"
                       aria-current="page"
@@ -239,6 +241,29 @@ export default function Navbar(props) {
                   )}
                 </li>
 
+                {/* timer */}
+                {/* <li
+                  className={`nav-item ${
+                    location.pathname === "/quiz"
+                      ? "locationChangeNavItemStyle"
+                      : ""
+                  }`}
+                >
+                  {((localStorage.getItem("auth-token") ||
+                    localStorage.getItem("adminAuthToken"))&& location.pathname == '/quizPage') && (
+                    <Link
+                      className="nav-link  me-3 navbar-buttons"
+                      aria-current="page"
+                      id="quiz"
+                      to="/quiz"
+                      onClick={navButtonClickHandle}
+                    >
+                      <img src={QuizLogo} alt=".." />
+                      <Timer expiryTimestamp={props.timerTime}/>
+                    </Link>
+                  )}
+                </li> */}
+
                 <li
                   className={`nav-item ${
                     location.pathname === "/profile"
@@ -247,8 +272,8 @@ export default function Navbar(props) {
                   }`}
                 >
                   {/* this is the dropdown for getting the user/admin profile details  */}
-                  {(localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken")) && (
+                  {((localStorage.getItem("auth-token") ||
+                    localStorage.getItem("adminAuthToken")) && !quizStarted ) && (
                    
                     <div className="dropdown">
                       <button
