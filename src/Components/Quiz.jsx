@@ -7,6 +7,8 @@ import {  toast } from "react-toastify";
 import QuizPage from "./QuizPage";
 import { Output } from "@mui/icons-material";
 import resourcesContext from "../Context/resourcesContext";
+import loginLoader from '../MediaResources/LoginSignup/LoginLoader.gif';
+
 
 
 
