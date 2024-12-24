@@ -379,9 +379,7 @@ export default function SkillSelection(props) {
             return (
               <div className="card skill col-md-1 " onClick={()=>setQT(element.title)} data-bs-toggle="modal" data-bs-target="#skillSelectionModal"  key={element.title}>
                 <img src={element.Logo} className="card-img-top" alt="..." />
-                <div className="card-body">
                   <p className="card-title"> {element.title}</p>
-                </div>
               </div>
             );
           })}

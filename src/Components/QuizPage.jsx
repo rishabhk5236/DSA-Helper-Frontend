@@ -182,7 +182,7 @@ export default function QuizPage(props) {
 
       {/* this code gets trigger when there is no data   */}
       {quizStarted && !props.output && (
-        <div className="text-center ">
+        <div className="text-center carLoading">
           <img src={quizSpinner} alt="Loading..." />
           <h2>Loading...</h2>
         </div>

@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import otpLoading from '../MediaResources/LoginSignup/otpLoading.gif'
 import { useNavigate} from "react-router-dom";
 import sideImage from '../MediaResources/LoginSignup/sideImageOfLginSignupPage.gif'
+import loginLoader from '../MediaResources/LoginSignup/LoginLoader.gif';
 
 
 
@@ -32,6 +33,12 @@ const navigate=useNavigate();
   const [otpState,setOtpState]=useState("Get Otp");
   const [otpSendingState,setOtpSendingState]=useState(false);
   let [OTP,setOTP]=useState("");
+
+  const [loginLoading,setLoginLoading]=useState(false);
+
+  const [loading,setLoading] = useState(false);
+  // this state gets trigger when the loading time is too long 
+  const [loginDelay,setLoginDelay] = useState(false);
   
   let [wrongOtp,SetWrongOtp]=useState(false);
 
@@ -126,6 +133,14 @@ const navigate=useNavigate();
 
   const handleLogin = async (e)=> {
 
+    
+    setLoading(true);
+
+    // setting login delay 
+    setTimeout(function() {
+      setLoginDelay(true);
+    }, 10000);
+
     props.setProgress(10);
     e.preventDefault();
     
@@ -175,6 +190,15 @@ const navigate=useNavigate();
   // this code is for signup
 
   const handleSignup=async (e)=>{
+
+
+    
+    setLoading(true);
+
+    // setting login delay 
+    setTimeout(function() {
+      setLoginDelay(true);
+    }, 10000);
 
     
     e.preventDefault();
@@ -377,10 +401,16 @@ const navigate=useNavigate();
 
   return (
     <>
-    <div className="mainLoginSignup d-flex justify-content-center">
+    <div className="mainLoginSignup d-flex justify-content-center ">
 
-    
+      {loading && <div className="loginLoader">
+        <img src={loginLoader} alt="logging in"/>
         
+        {!loginDelay && <p>Logging you in....</p>}
+        {loginDelay && <p>Loggin you in... It may take a while...</p>}
+
+
+      </div>}
 
 
       <div className="sideOfLogin_signupPage">

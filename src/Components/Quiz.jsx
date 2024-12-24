@@ -25,6 +25,9 @@ export default function Quiz(props) {
   const [score, setScore] = useState(new Array(10).fill(0));
   const [quizTopic,setQuizTopic]=useState("");
 
+  const [quizLoading,setQuizLoading] = useState(false);
+  const [quizDelay,setQuizDelay] = useState(false);
+
   
 
   const modalOnChange = (e) => {
@@ -37,6 +40,15 @@ export default function Quiz(props) {
 
   // for fetching the raw data
   const query = async () => {
+
+
+    setQuizLoading(true);
+
+    // setting login delay 
+    setTimeout(function() {
+      setQuizDelay(true);
+    }, 10000);
+
 
 
     if(props.quizModalDetails.noOfQuestions>100){
@@ -154,7 +166,15 @@ export default function Quiz(props) {
       <SkillSelection setQuizTopic={setQuizTopic} />
      
         
+      {/* this code is for handling the loader of quizpage  */}
+      {quizLoading && <div className="quizLoader">
+        <img src={loginLoader} alt="Quiz Loading"/>
+        
+        {!quizDelay && <p>Loading Quiz....</p>}
+        {quizDelay && <p>Loading Quiz... It may take a while...</p>}
 
+
+      </div>}
       
 
       <div

@@ -181,7 +181,8 @@
     }
 
     .optionCard .card-body{
-        font-size: 2.5vw;
+        font-size: 3vw;
+        
         margin-bottom: 1vw;
     }
 
@@ -215,4 +216,21 @@
         font-size: 3.5vw;
     }
 
+
+    .carLoading img{
+        width: 30vh;
+    }
+
+    .optionCard .card-body:hover {
+        color: black;
+        background-color: white;
+        font-weight: 400;
+    }
+
+    .optionCard .card-body:active {
+        color: black;
+        background-color: rgb(229, 249, 222);
+    }
+
+    
 }

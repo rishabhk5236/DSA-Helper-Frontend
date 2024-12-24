@@ -55,8 +55,18 @@
 
 .quiz-techstack .skillList {
     margin: 0.5vw;
+    display: flex;
+    justify-content: space-evenly;
     font-size: 1vw;
     padding: 0.2vw;
+}
+
+
+.quiz-techstack .skillList .card {
+    display: flex;
+    flex-direction:column;
+    
+    align-items: center;
 }
 
 .skillList .skill {
@@ -77,6 +87,27 @@
 }
 
 
+
+.quizLoader {
+    display: flex;
+    width: 100vw;
+    height:88%;
+
+    background-color: rgba(233, 248, 220, 0.555);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.quizLoader img{
+    width: 25vw;
+}
+
+.quizLoader p{
+    font-size: 2.2vw;
+    font-weight: 600;
+}
 
 
 
@@ -111,16 +142,17 @@
         background: none;
         display: flex;
         flex-wrap: wrap;
+        
         justify-content: space-evenly;
     }
     
     .quiz-techstack .skillCategory .btn {
         /* width: 16.66%; */
-        width: 10vh;
-        flex-wrap: wrap;
+        width: 15vh;
+        padding: 1vw;
         
         margin: 1vw 1vw;
-        font-size: 2vw;
+        font-size: 3vw;
         border: 0.1vw solid rgb(40, 84, 33);
         background-color: rgb(71, 139, 60);
         padding: 0.5vw;
@@ -153,12 +185,18 @@
     
 
     .quiz-techstack .skillList .card{
-        width: 20vw;
+        width: 30%;
         margin-bottom: 1vh;
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .quiz-techstack .skillList .card-title{
-        font-size: 2.5vw;
+        font-size: 3vw;
+        font-weight: 600;
     }
 
     
@@ -166,7 +204,21 @@
         margin-bottom: 5vh;   
     }
     
+
+    .quizLoader {
+        height:100%;
+        background-color: rgba(233, 248, 220, 0.555);
+
+    }
     
+    .quizLoader img{
+        width: 25vh;
+    }
+    
+    .quizLoader p{
+        font-size: 2.2vh;
+        font-weight: 600;
+    }
 
     
 }

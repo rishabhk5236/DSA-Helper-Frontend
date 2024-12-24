@@ -104,6 +104,29 @@
     height: 20%;
 }
 
+
+.loginLoader {
+    display: flex;
+    width: 100vw;
+    height:88%;
+
+    background-color: rgba(233, 248, 220, 0.555);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.loginLoader img{
+    width: 25vw;
+}
+
+.loginLoader p{
+    font-size: 2.2vw;
+    font-weight: 600;
+}
+
+
 @media screen and (max-width:600px) {
     /* .loginSignupFormContainer{
         width: 50vw;
@@ -150,4 +173,21 @@
     .adminLoginBtn {
         font-size: 2vw;
     }
+
+    .loginLoader {
+        height:100%;
+        background-color: rgba(233, 248, 220, 0.555);
+
+    }
+    
+    .loginLoader img{
+        width: 25vh;
+    }
+    
+    .loginLoader p{
+        font-size: 2.2vh;
+        font-weight: 600;
+    }
+
+    
 }
