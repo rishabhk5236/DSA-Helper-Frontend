@@ -73,6 +73,8 @@ const navigate=useNavigate();
 
   const handleUpdatePassword= async (e)=>{
     e.preventDefault();
+    setLoading(true);
+
 
     if(resetPasswordInput.otp!==OTP){
       SetWrongOtp(true);
@@ -91,6 +93,9 @@ const navigate=useNavigate();
         autoClose: 3000,
         theme: "colored",
       })
+
+    setLoading(false);
+
       return;
     }
 
@@ -174,6 +179,7 @@ const navigate=useNavigate();
             theme: "colored",
         })
         props.setProgress(100);
+        setLoading(false);
         
         return ;
     }
@@ -218,6 +224,7 @@ const navigate=useNavigate();
         autoClose: 3000,
         theme: "colored",
       })
+      setLoading(false);
       props.setProgress(100);
       return;
     }
