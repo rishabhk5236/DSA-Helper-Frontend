@@ -94,7 +94,7 @@ export default function QuizPage(props) {
     newScore[index] = option === right_Answer ? 1 : 0;
     setScore(newScore);
 
-    console.log("option : " + option);
+    // console.log("option : " + option);
     // selectedAnswers[index] = option;
 
     // this code is for storing the option value into selected answers array
@@ -133,8 +133,8 @@ export default function QuizPage(props) {
       }
     });
 
-    console.log("Final Score : " + finalScore);
-    console.log(selectedAnswers);
+    // console.log("Final Score : " + finalScore);
+    // console.log(selectedAnswers);
 
     setQuizFinish(true);
   };
@@ -142,7 +142,7 @@ export default function QuizPage(props) {
   // this function is mapped for starting quiz button in start quiz screen
   const startQuiz = () => {
     setQuizStart(true);
-    console.log(quizStarted);
+    // console.log(quizStarted);
   };
 
   // this function is for retaking the quiz 
