@@ -5,6 +5,8 @@ import SkillSelection from "./SkillSelection";
 import { toast } from "react-toastify";
 import resourcesContext from "../Context/resourcesContext";
 import loginLoader from "../MediaResources/LoginSignup/LoginLoader.gif";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
 
 export default function Quiz(props) {
   const { setQuizStart, getResources } = useContext(resourcesContext);
@@ -12,7 +14,6 @@ export default function Quiz(props) {
   const API_KEY = "AIzaSyAdCHhYzCboHMuey6fUs1Up3D05EhSv02w";
   const navigate = useNavigate();
 
-  const { GoogleGenerativeAI } = require("@google/generative-ai");
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({
     model: "gemini-2.5-flash",
