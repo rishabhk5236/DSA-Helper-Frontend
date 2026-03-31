@@ -11,7 +11,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 export default function Quiz(props) {
   const { setQuizStart, getResources } = useContext(resourcesContext);
 
-  const API_KEY = "AIzaSyAdCHhYzCboHMuey6fUs1Up3D05EhSv02w";
+  const API_KEY = process.env.GEMINI_API_KEY;
   const navigate = useNavigate();
 
   const genAI = new GoogleGenerativeAI(API_KEY);
