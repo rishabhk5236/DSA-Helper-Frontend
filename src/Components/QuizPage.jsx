@@ -161,21 +161,21 @@ export default function QuizPage(props) {
 
       {!quizStarted && (
         <div className="startQuizContainer container">
-          <div class="card text-center mt-4">
-            <div class="card-header">Welcome to the {props.quizTopic} Quiz</div>
-            <div class="card-body">
-              <h5 class="card-title">
+          <div className="card text-center mt-4">
+            <div className="card-header">Welcome to the {props.quizTopic} Quiz</div>
+            <div className="card-body">
+              <h5 className="card-title">
                 Level : {props.quizModalDetails.proficiency}
               </h5>
-              <p class="card-text">
+              <p className="card-text">
                 You have got {quizTimer} minutes for{" "}
                 {props.quizModalDetails.noOfQuestions} questions
               </p>
-              <button class="btn btn-success" onClick={startQuiz}>
+              <button className="btn btn-success" onClick={startQuiz}>
                 Start Quiz
               </button>
             </div>
-            <div class="card-footer text-body-secondary">Best of luck</div>
+            <div className="card-footer text-body-secondary">Best of luck</div>
           </div>
         </div>
       )}
@@ -313,8 +313,8 @@ export default function QuizPage(props) {
       {/* this code gets triggers after quiz completion */}
       {quizFinish && (
         <div className="quizFinishContainer container mt-3 text-center">
-          <div class="card">
-            <div class="card-body">
+          <div className="card">
+            <div className="card-body">
               {finalScore >= props.quizModalDetails.noOfQuestions * 0.3 && (
                 <>
                   <img src={quizPassLogo} className="mb-3" />
@@ -355,32 +355,32 @@ export default function QuizPage(props) {
       {/* this modal is for reviewing the answers  */}
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="reviewAnswers"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="reviewAnswersLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-scrollable  modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="reviewAnswersLabel">
+        <div className="modal-dialog modal-dialog-scrollable  modal-xl">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="reviewAnswersLabel">
                 Your Answers
               </h5>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               {/* this code is for mapping the questions  */}
 
               {props.output && props.output.map((Element, index) => {
                 return (
-                  <div class="card reviewAnswerCard">
-                    <div class="card-body">
+                  <div  key={props.output[index].Question} className="card reviewAnswerCard">
+                    <div className="card-body">
                       <h3 className="card-title">Question{" : "}{index + 1}</h3>
 
                       <h5 className="card-text mb-3">
@@ -434,10 +434,10 @@ export default function QuizPage(props) {
                 );
               })}
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                className="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
                 Close
