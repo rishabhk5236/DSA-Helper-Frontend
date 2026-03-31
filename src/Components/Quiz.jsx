@@ -11,7 +11,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 export default function Quiz(props) {
   const { setQuizStart, getResources } = useContext(resourcesContext);
 
-  const API_KEY = process.env.GEMINI_API_KEY;
+  const API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
   const navigate = useNavigate();
 
   const genAI = new GoogleGenerativeAI(API_KEY);
@@ -46,6 +46,10 @@ export default function Quiz(props) {
   const query = async (retry = 0) => {
     const MAX_RETRIES = 3;
 
+
+    if (!API_KEY) {
+      console.error("API key missing : "+API_KEY);
+    }
     setQuizLoading(true);
 
     // validations
