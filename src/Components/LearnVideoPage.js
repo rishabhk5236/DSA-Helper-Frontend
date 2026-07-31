@@ -49,11 +49,7 @@ export default function LearnVideoPage(props) {
   };
 
   const componentDidMount=async()=> {
-    if(!localStorage.getItem('auth-token') && !localStorage.getItem('adminAuthToken')){
-      navigate('/login-signup');
-      props.showAlert("You are logged out because of being inactive for 30 minutes",'danger');
-      return;
-    }
+
 
     if(props.videoId){
       localStorage.setItem('videoId', props.videoId);

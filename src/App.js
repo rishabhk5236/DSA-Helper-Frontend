@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import LearnVideoPage from "./Components/LearnVideoPage";
 import LoadingBar from "react-top-loading-bar";
 import Home from "./Components/Home";
-import LoginSignup from "./Components/LoginSignup";
+
 import Alert from "./Components/Alert";
 import ResourcesState from "./Context/ResourcesState";
 import Resources from "./Components/Resources/Resources";
@@ -61,13 +61,7 @@ function App() {
   },[output])
 
   const SessionTimeOutLogoutUser=()=>{
-    if(localStorage.getItem('auth-token')){
-  
-        localStorage.removeItem('auth-token');
-        showAlert(`You are automatically logged out because of being inactive for ${timeoutId}`,"danger");
-        window.location.reload();
-            
-      }
+
     if(localStorage.getItem('adminAuthToken')){
   
         localStorage.removeItem('adminAuthToken');
@@ -166,14 +160,10 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
                 <LearnVideoPage videoId={videoid} setProgress={setProgress} showAlert={showAlert} base_url={base_url} />
               }
             />
+
             <Route
               exact
-              path="/login-signup"
-              element={<LoginSignup setProgress={setProgress} base_url={base_url} />}
-            />
-            <Route
-              exact
-              path="/admin-login"
+              path="/admin"
               element={<AdminLoginPage setProgress={setProgress} base_url={base_url} />}
             />
             <Route

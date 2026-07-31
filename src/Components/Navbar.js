@@ -63,7 +63,7 @@ export default function Navbar(props) {
       autoClose: 3000,
       theme: "colored",
     });
-    navigate("/login-signup");
+    navigate("/");
   };
 
   // this code is for handling logout of admin
@@ -75,7 +75,7 @@ export default function Navbar(props) {
       autoClose: 3000,
       theme: "colored",
     });
-    navigate("/login-signup");
+    navigate("/");
   };
 
   useEffect(() => {
@@ -142,8 +142,7 @@ export default function Navbar(props) {
                   }`}
                 >
 
-                  {((localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken")) && !quizStarted  ) && (
+                  {(!quizStarted  ) && (
                     <Link
                       className="nav-link  me-3 navbar-buttons"
                       aria-current="page"
@@ -163,8 +162,7 @@ export default function Navbar(props) {
                       : ""
                   }`}
                 >
-                  {((localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken")) && !quizStarted ) && (
+                  {(!quizStarted ) && (
                     <Link
                       className="nav-link  me-3 navbar-buttons"
                       aria-current="page"
@@ -204,8 +202,7 @@ export default function Navbar(props) {
                       : ""
                   }`}
                 >
-                  {((localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken"))&& !quizStarted ) && (
+                  {(!quizStarted ) && (
                     <Link
                       className="nav-link  me-3 navbar-buttons"
                       aria-current="page"
@@ -226,8 +223,7 @@ export default function Navbar(props) {
                       : ""
                   }`}
                 >
-                  {((localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken"))&& !quizStarted ) && (
+                  {(!quizStarted ) && (
                     <Link
                       className="nav-link  me-3 navbar-buttons"
                       aria-current="page"
@@ -272,8 +268,7 @@ export default function Navbar(props) {
                   }`}
                 >
                   {/* this is the dropdown for getting the user/admin profile details  */}
-                  {((localStorage.getItem("auth-token") ||
-                    localStorage.getItem("adminAuthToken")) && !quizStarted ) && (
+                  {(localStorage.getItem("adminAuthToken") && !quizStarted ) && (
                    
                     <div className="dropdown">
                       <button
@@ -316,33 +311,8 @@ export default function Navbar(props) {
                   )}
                 </li>
               </ul>
-              {!(
-                localStorage.getItem("auth-token") ||
-                localStorage.getItem("adminAuthToken")
-              ) && (
-                <div
-                  className="btn-group d-flex justify-content-center"
-                  role="group"
-                  aria-label="Basic example"
-                >
-                  <Link
-                    to="/login-signup"
-                    type="button"
-                    className="btn signUpLoginbtn btn-outline-light"
-                    onClick={navButtonClickHandle}
-                  >
-                    SignUp/Login
-                  </Link>
-                </div>
-              )}
-              {localStorage.getItem("auth-token") && (
-                <button
-                  className="btn signUpLoginbtn btn-outline-light"
-                  onClick={handleLogOutClick}
-                >
-                  Logout
-                </button>
-              )}
+
+
 
               {localStorage.getItem("adminAuthToken") && (
                 <button

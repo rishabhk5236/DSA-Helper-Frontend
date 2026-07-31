@@ -43,21 +43,13 @@ export default function QuizPage(props) {
 
     // validating that the user is logged in
     
-    if (localStorage.getItem("auth-token") || localStorage.getItem('adminAuthToken')) {
       window.scrollTo(0, 0);
       getResources();
-    } else {
-      navigate("/login-signup");
-      props.showAlert(
-        "You are logged out because of being inactive for 30 minutes",
-        "danger"
-      );
-    }
 
 
 
     setTime();
-    setUserName(userDetails.name);
+    setUserName(userDetails?.name || "Guest");
 
 
     quizFinish && (

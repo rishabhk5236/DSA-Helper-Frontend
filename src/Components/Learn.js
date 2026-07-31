@@ -5,10 +5,10 @@ import { useContext } from "react";
 import resourcesContext from "../Context/resourcesContext";
 
 export default function Learn(props) {
-  
-  const context=useContext(resourcesContext);
 
-  const {playlist,animatedVideos,oneShotVideos,getResources}=context;
+  const context = useContext(resourcesContext);
+
+  const { playlist, animatedVideos, oneShotVideos, getResources } = context;
 
   const host = props.base_url;
 
@@ -18,22 +18,14 @@ export default function Learn(props) {
 
 
   useEffect(() => {
-    if (localStorage.getItem("auth-token") || localStorage.getItem('adminAuthToken')) {
-      window.scrollTo(0, 0);
-      getResources();
-    } else {
-      navigate("/login-signup");
-      props.showAlert(
-        "You are logged out because of being inactive for 30 minutes",
-        "danger"
-      );
-    }
+    window.scrollTo(0, 0);
+    getResources();
   }, []);
 
-  
+
   return (
     <>
-      <div className="container">
+      <div className="">
         <h1 className="heading">Animated Concepts</h1>
         <div className="row d-flex justify-content-center videosSection">
           {animatedVideos.map((element) => {

@@ -122,16 +122,8 @@ export default function Jobs(props) {
   }
 
   useEffect(() => {
-    if (
-      localStorage.getItem("auth-token") ||
-      localStorage.getItem("adminAuthToken")
-    ) {
       window.scroll(0, 0);
       getJobs();
-      
-    } else {
-      navigate("/");
-    }
   }, []);
 
   return (

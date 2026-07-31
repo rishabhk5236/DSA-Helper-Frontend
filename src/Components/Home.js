@@ -92,32 +92,18 @@ export default function Home(props) {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("auth-token")) {
-      getGreet();
-      getUserDetails();
-      navigate("/");
-      window.scrollTo(0, 0);
-      props.setProgress(100);
-    } else if (localStorage.getItem("adminAuthToken")) {
-      getGreet();
-      getAdminDetails();
-      navigate("/");
-      window.scrollTo(0, 0);
-      props.setProgress(100);
-    } else {
-      navigate("/login-signup");
-      props.showAlert(
-        "You are logged out because of being inactive for 30 minutes",
-        "danger"
-      );
-    }
+    getGreet();
+    getUserDetails();
+    navigate("/");
+    window.scrollTo(0, 0);
+    props.setProgress(100);
   }, []);
 
   return (
     <>
       {" "}
       {/* this code is for greet card */}
-      <div className="container">
+      <div className="">
         <div className="card greetCard">
           <div className="row g-0">
             <div className="content d-flex align-items-center">
@@ -135,7 +121,7 @@ export default function Home(props) {
                     {greetImgMsg === "evening" && (
                       <img src={nightMoonPng} alt=".." />
                     )}{" "}
-                    {greetMsg} {getName()}, Happy to see you again{" "}
+                    {greetMsg}, Happy to see you again{" "}
                   </p>
                   <h1 className="welcomeHeading"> Welcome to DSA Helper </h1>{" "}
                   <div className="animated-text">
@@ -166,9 +152,7 @@ export default function Home(props) {
             </div>{" "}
           </div>{" "}
         </div>{" "}
-      </div>
-      {/* this code is for Bodymenu */}{" "}
-      <div className="container">
+        {/* this code is for Bodymenu */}{" "}
         <h1 h1 className="text-center m-4">
           {" "}
           What 's Here !
@@ -200,43 +184,45 @@ export default function Home(props) {
         <h1 className="exploreHeading text-center m-4">
           You can Explore Notes and many courses here{" "}
         </h1>{" "}
-      </div>
-      <div className="row justify-content-center">
-        <div className="card col-md-4 text-center" id="container2">
-          <img className="card-img-top" src={explrCourse} alt=".." />
-          <div className="card-body">
-            <h5 className="card-title"> Access Notes </h5>{" "}
-            <p className="card-text">
-              You can access very precised notes of various subjects that can
-              help you be higlighted in your class.{" "}
-            </p>{" "}
-            <Link
-              to="/question-papers-notes"
-              className="btn btn-outline-success"
-              onClick={() => props.setProgress(100)}
-            >
-              Start Accessing{" "}
-            </Link>{" "}
-          </div>{" "}
-        </div>
-        <div className="card col-md-4 text-center" id="container2">
-          <img className="card-img-top" src={accessNotes} alt=".." />
-          <div className="card-body">
-            <h5 className="card-title"> Explore Tutorials </h5>{" "}
-            <p className="card-text ">
-              Here you can Explore various number of super easy and genuine
-              courses that helps you grow skills.{" "}
-            </p>{" "}
-            <Link
-              to="/learn"
-              className="btn btn-outline-success"
-              onClick={() => props.setProgress(100)}
-            >
-              Start Exploring{" "}
-            </Link>{" "}
+
+        <div className="row justify-content-center">
+          <div className="card col-md-4 text-center" id="container2">
+            <img className="card-img-top" src={explrCourse} alt=".." />
+            <div className="card-body">
+              <h5 className="card-title"> Access Notes </h5>{" "}
+              <p className="card-text">
+                You can access very precised notes of various subjects that can
+                help you be higlighted in your class.{" "}
+              </p>{" "}
+              <Link
+                to="/question-papers-notes"
+                className="btn btn-outline-success"
+                onClick={() => props.setProgress(100)}
+              >
+                Start Accessing{" "}
+              </Link>{" "}
+            </div>{" "}
+          </div>
+          <div className="card col-md-4 text-center" id="container2">
+            <img className="card-img-top" src={accessNotes} alt=".." />
+            <div className="card-body">
+              <h5 className="card-title"> Explore Tutorials </h5>{" "}
+              <p className="card-text ">
+                Here you can Explore various number of super easy and genuine
+                courses that helps you grow skills.{" "}
+              </p>{" "}
+              <Link
+                to="/learn"
+                className="btn btn-outline-success"
+                onClick={() => props.setProgress(100)}
+              >
+                Start Exploring{" "}
+              </Link>{" "}
+            </div>{" "}
           </div>{" "}
         </div>{" "}
-      </div>{" "}
+      </div>
+
     </>
   );
 }

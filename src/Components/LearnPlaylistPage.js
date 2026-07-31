@@ -50,11 +50,7 @@ export default function LearnPlaylistPage (props) {
   // this function sets all things while mounting of component 
 
   const onComponentMount=async ()=>{
-    if(!localStorage.getItem('auth-token') && !localStorage.getItem('adminAuthToken')){
-      navigate('/login-signup');
-      props.showAlert("You are logged out because of being inactive for 30 minutes",'danger');
-      return;
-    }
+
     if(props.playlistid){
         localStorage.setItem('playlistid', props.playlistid);
     }
@@ -161,10 +157,10 @@ export default function LearnPlaylistPage (props) {
                   id="multiCollapseExample1"
                 >
                   <div className="card collapse-card ">
-                    {playlists.map((element) => {
+                    {playlists.map((element, index) => {
                       return (
                         <Link
-                          key={element.snippet.title} 
+                          key={element.snippet.resourceId.videoId + "-" + index} 
                           className="collapse-anchor"
                           onClick={() =>
                             handleSideBarClick(element.snippet.position)
@@ -228,10 +224,10 @@ export default function LearnPlaylistPage (props) {
           <div className="container side-bar">
             <h3 className="side-bar-heading text-center">Course Content</h3>
 
-            {playlists.map((element) => {
+            {playlists.map((element, index) => {
               return (
                 <Link
-                key={element.snippet.title} 
+                key={element.snippet.resourceId.videoId + "-" + index} 
                   className="side-bar-anchor"
                   onClick={() =>
                     handleSideBarClick(element.snippet.position)

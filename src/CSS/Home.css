@@ -2,7 +2,7 @@
 
 .greetCard {
     padding: 2vw;
-    margin-top: 2vw;
+    margin: 2vw;
     box-shadow: 0px 0px 0.5vw 0.5vw rgb(170, 170, 170);
 }
 
@@ -48,35 +48,41 @@
     .greetCard .col-md-4 img {
         display: none;
     }
+
     .content {
         width: 100%;
-    }
-    .content {
         text-align: center;
     }
+
     .content p img {
-        width: 6vw;
+        width: 8vw;
     }
+
     .bodyForHeadings h1 {
+        font-size: 8vw;
+    }
+
+    .bodyForHeadings .static-text {
         font-size: 6vw;
     }
-    .bodyForHeadings .static-text {
-        font-size: 4.3vw;
-    }
+
     .bodyForHeadings p {
-        font-size: 2.5vw;
+        font-size: 4vw;
     }
+
     .bodyForHeadings .dynamic-text {
-        font-size: 4.3vw;
-        margin-left: 1vw;
+        font-size: 6vw;
+        margin-left: 2vw;
         color: rgb(56, 195, 56);
     }
+
     .animated-text {
         justify-content: center;
     }
 }
 
 @media (min-width: 1200px) {
+
     .container,
     .container-lg,
     .container-md,
@@ -158,49 +164,68 @@ body {
 
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 4vw;
+        font-size: 7vw;
     }
+
+    .exploreHeading {
+        font-size: 6vw;
+    }
+
     #container2 .card-title {
+        font-size: 6vw;
+    }
+
+    #container2 .card-text {
         font-size: 4vw;
     }
-    #container2 .card-text {
-        font-size: 2vw;
-    }
+
     #container .card {
         padding: 0;
     }
+
     #container2 {
-        width: 45vw;
-        margin: 2vw;
+        width: 90vw;
+        margin: 4vw 0;
     }
+
     #container2 .btn {
-        font-size: 2vw;
+        font-size: 4vw;
         color: rgb(10, 37, 9);
     }
+
     .clickButton {
-        font-size: 2vw;
-        padding: 1vw;
+        font-size: 4vw;
+        padding: 2vw;
     }
+
     .menuCardGroup {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
+
     .menuCardGroup .menuCard {
-        width: 35vw;
-        margin: 2vw;
+        width: 90vw;
+        margin: 4vw 0;
         overflow: hidden;
     }
+
     .menuCard img {
-        width: 28vw;
+        width: 70vw;
+        margin: 0 auto;
     }
+
     .menuCardGroup .menuCard .card-text {
         margin: 0;
-        font-size: 2vw;
+        font-size: 4vw;
     }
+
     .menuCardGroup .menuCard .card-title {
-        margin-bottom: 1vw;
-        font-size: 2.5vw;
+        margin-bottom: 2vw;
+        font-size: 6vw;
     }
+
     .menuCardGroup .menuCard .btn {
-        font-size: 2.1vw;
+        font-size: 4vw;
     }
 }

@@ -10,22 +10,11 @@ export default function Algorithm(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (
-      localStorage.getItem("auth-token") ||
-      localStorage.getItem("adminAuthToken")
-    ) {
         // this code executes when the component mount 
         props.setplaylistid(playlistId);
         navigate('/playlistpage');
 
       window.scrollTo(0, 0);
-    } else {
-      navigate("/login-signup");
-      props.showAlert(
-        "You are logged out because of being inactive for 30 minutes",
-        "danger"
-      );
-    }
   }, []);
 
   return (

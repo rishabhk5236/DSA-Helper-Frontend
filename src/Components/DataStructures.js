@@ -87,17 +87,7 @@ export default function DataStructures(props) {
   
   
     useEffect(() => {
-      if (localStorage.getItem("auth-token") || localStorage.getItem('adminAuthToken')) {
-       
         window.scrollTo(0, 0);
-
-      } else {
-        navigate("/login-signup");
-        props.showAlert(
-          "You are logged out because of being inactive for 30 minutes",
-          "danger"
-        );
-      }
     }, []);
     
 
