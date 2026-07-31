@@ -8,17 +8,13 @@ export default function AdminLoginPage(props) {
 
   const navigate=useNavigate();
 
-  const [credentials,setCredentials]=useState({email:"",password:""});
+  const [credentials,setCredentials]=useState({email:""});
 
   const adminInputOnchange=(e)=>{
     setCredentials({...credentials,[e.target.name]:e.target.value});
   }
 
-  const showPassword=()=>{
-    let password = document.querySelector('#password');
-    const type=password.getAttribute('type')==='password'?'text':'password';
-    password.setAttribute('type',type);
-  }
+
 
   // this code is for handleing the login of admin 
 
@@ -32,7 +28,7 @@ export default function AdminLoginPage(props) {
       headers:{
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({email:credentials.email,password:credentials.password})
+      body: JSON.stringify({email:credentials.email})
     })
 
     const json=await response.json();
@@ -43,7 +39,7 @@ export default function AdminLoginPage(props) {
         autoClose: 3000,
         theme: "colored",
       })
-    setCredentials({email:"",password:""});
+    setCredentials({email:""});
     localStorage.setItem('adminAuthToken',json.adminAuthToken);
     navigate('/');
 
@@ -81,26 +77,8 @@ export default function AdminLoginPage(props) {
             onChange={adminInputOnchange}
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            name="password"
-            value={credentials.password}
-            onChange={adminInputOnchange}
-          />
-        </div>
-        <div className="mb-3 form-check">
-          <input type="checkbox" className="form-check-input" id="showPassword" onChange={showPassword}/>
-          <label className="form-check-label" htmlFor="showPassword">
-            Show Password
-          </label>
-        </div>
-        <button disabled={credentials.email==="" || credentials.password===""} type="submit" className="btn btn-success" onClick={handleAdminLoginOnClick}>
+
+        <button disabled={credentials.email===""} type="submit" className="btn btn-success" onClick={handleAdminLoginOnClick}>
           Login
         </button>
       </form>
