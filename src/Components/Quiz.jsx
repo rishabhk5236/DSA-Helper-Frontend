@@ -15,12 +15,10 @@ export default function Quiz(props) {
   const navigate = useNavigate();
 
   const genAI = new GoogleGenerativeAI(API_KEY);
-  const freeModels = [
-    "gemini-1.5-flash",
-    "gemini-1.5-flash-8b",
-    "gemini-1.5-pro",
-    "gemini-1.0-pro"
-  ];
+  const model = genAI.getGenerativeModel({
+    model: "gemini-3.6-flash",
+    generationConfig: { responseMimeType: "application/json" },
+  });
 
   const [loading, setLoading] = useState(false);
   const [score, setScore] = useState(new Array(10).fill(0));
@@ -50,7 +48,7 @@ export default function Quiz(props) {
 
 
     if (!API_KEY) {
-      console.error("API key missing : "+API_KEY);
+      
     }
     setQuizLoading(true);
 
@@ -92,47 +90,39 @@ export default function Quiz(props) {
     
     `;
 
-    let success = false;
-    let data;
+    try {
+      const result = await model.generateContent(prompt);
+      const text = result.response.text();
 
-    for (const modelName of freeModels) {
+      let data;
+
+      // ✅ safe JSON parsing
       try {
-        console.log(`Attempting generation with model: ${modelName}`);
-        const currentModel = genAI.getGenerativeModel({
-          model: modelName,
-          generationConfig: { responseMimeType: "application/json" },
-        });
-
-        const result = await currentModel.generateContent(prompt);
-        const text = result.response.text();
-
-        console.log(text);
-
-        // ✅ safe JSON parsing
         data = JSON.parse(text);
-
-        if (data && Array.isArray(data)) {
-          success = true;
-          break; // Exit loop on success
-        }
-      } catch (error) {
-        console.error(`Error with model ${modelName}:`, error);
-        // Fallback to the next model in the list
+      } catch {
+        throw new Error("Invalid JSON from API");
       }
-    }
 
-    if (success) {
+      if (!data || !Array.isArray(data)) {
+        if (retry < MAX_RETRIES) {
+          return query(retry + 1);
+        } else {
+          toast.error("Failed to generate quiz. Try again.");
+          setQuizLoading(false);
+          setLoading(false);
+          return;
+        }
+      }
+
       props.setOutput(data);
-      console.log(data);
 
       navigate("/quizPage");
       props.setProgress(100);
-    } else {
+    } catch (error) {
       if (retry < MAX_RETRIES) {
-        console.log(`Retrying... Attempt ${retry + 1}`);
         return query(retry + 1);
       } else {
-        toast.error("Failed to generate quiz after multiple attempts. Please try again later.");
+        toast.error("Quiz generation limit exceeds, please wait for some time");
       }
     }
 
@@ -141,8 +131,8 @@ export default function Quiz(props) {
   };
 
   useEffect(() => {
-      window.scrollTo(0, 0);
-      getResources();
+    window.scrollTo(0, 0);
+    getResources();
 
     setLoading(false);
     setQuizTopic("");
