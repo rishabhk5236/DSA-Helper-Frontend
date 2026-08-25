@@ -15,6 +15,7 @@ import ResourcesState from "./Context/ResourcesState";
 import Resources from "./Components/Resources/Resources";
 import QuestionPapers from './Components/QuetionPapers'
 import {  ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import AdminLoginPage from "./Components/AdminLoginPage";
 import Algorithm from "./Components/Algorithm";
 import Pointers from "./Components/Pointers";

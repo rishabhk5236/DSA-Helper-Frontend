@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import "../CSS/LoginSignup.css";
 import {  toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import otpLoading from '../MediaResources/LoginSignup/otpLoading.gif'
 import { useNavigate} from "react-router-dom";
 import sideImage from '../MediaResources/LoginSignup/sideImageOfLginSignupPage.gif'
